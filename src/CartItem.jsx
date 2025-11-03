@@ -21,8 +21,6 @@ const CartItem = ({ onContinueShopping }) => {
    onContinueShopping(e);
   };
 
-
-
   const handleIncrement = (item) => {
     dispatch(updateQuantity({name: item.name, quantity: item.quantity + 1}));
   };
@@ -44,6 +42,10 @@ const CartItem = ({ onContinueShopping }) => {
     let total = 0;
     const cost = parseFloat(item.cost.substring(1));
     total += cost * item.quantity;
+  };
+
+  const calculateTotalQuantity = () => {
+    return CartItems ? CartItems.reduce((total, item) => total + item.quantity, 0) : 0;
   };
 
   return (
