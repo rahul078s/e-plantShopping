@@ -42,10 +42,11 @@ const CartItem = ({ onContinueShopping }) => {
     let total = 0;
     const cost = parseFloat(item.cost.substring(1));
     total += cost * item.quantity;
+    return total;
   };
 
   const calculateTotalQuantity = () => {
-    return CartItems ? CartItems.reduce((total, item) => total + item.quantity, 0) : 0;
+    return cart ? cart.reduce((sum, item) => sum + item.quantity, 0) : 0;
   };
 
   return (

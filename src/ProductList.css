@@ -74,6 +74,21 @@ body {
     gap: 20px;
 }
 
+/* Small confirmation popup above the Add to Cart button */
+.added-popup {
+    position: absolute;
+    bottom: 58px; /* sits just above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
 /* Pseudo-classes - Hover effect on product button */
 .product-card:hover {
     transform: scale(1.05);
@@ -164,13 +179,20 @@ body {
     color: white;
     display: flex;
 }
-.cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
-    position: absolute;
-    font-size: 29px;
 
+/* Numeric badge on cart icon */
+.cart-badge {
+    position: absolute;
+    top: 25px; /* inside the icon, near the top */
+    right: 28px; /* inside the icon, near the right edge */
+    color: #ffffff; /* plain number with no background */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0; /* remove background shape */
+    min-width: 0;
+    height: auto;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45); /* keep readable on green navbar */
 }
 .plantname_heading{
    display: flex;
